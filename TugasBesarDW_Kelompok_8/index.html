@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Painting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <h1 class="logo">World Of Painting</h1>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Tour.html">Tour</a></li>
+            <li><a href="./Explore.html">Explore</a></li>
+            <li class="ctn"><a href="https://www.instagram.com/photoup94?igsh=OGQ5ZDc2ODk2ZA==">Contact</a></li>
+        </ul>
+        <img src="./img/menu-btn.png" alt="" class="menu-btn">
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h2>Explore amazing photography</h2>
+            <div class="line"></div>
+            <h1>DIGITAL PHOTO <span>EXHIBITION</span></h1>
+            <a href="#explore-section" class="ctn">Learn More</a>
+        </div>
+    </header>
+
+        <!-- Events -->
+    <section class="events">
+        <div class="title">
+            <h1>Upcoming Events</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Pameran Foto</h4>
+                <p>Kami juga membuat pameran foto dari fotografi tim kami.</p>
+                <img src="./img/20230902_202422.jpg" alt="">
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col">
+                <h4>Tim Fotografi</h4>
+                <p>Berikut adalah para tim fotografi kami.</p>
+                <img src="./img/IMG-20230903-WA0060.jpg" alt="">     
+            </div>
+        </div>
+    </section>
+
+
+    <section id="explore-section" class="explore">
+        <div class="explore-content">
+            <h1>Explore amazing photography</h1>
+            <div class="line"></div>
+            <p>Membuatmu terkagum dengan fotografi yang menarik</p>
+            <a href="#" class="ctn">Learn More</a>
+        </div>
+    </section>
+
+    <script>
+        const menuBtn = document.querySelector('.menu-btn')
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click', () => {
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+
+</html>

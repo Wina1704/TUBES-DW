@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour</title>
+    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <style>
+        /* Tambahkan CSS yang dibutuhkan di sini */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 0;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white; /* Set text color to white */
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .ctn {
+            padding: 8px 15px;
+            background: #ff9100;
+            border-radius: 20px;
+            color: black;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #eaeaea;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 1000px;
+            height: 60vh;
+            padding: 5%;
+            background-color: white;
+            box-shadow: 0 5px 10px #dbdbdb;
+        }
+
+        #slide {
+            width: 100%;
+            margin-top: 5%;
+            overflow: hidden;
+        }
+
+        .item {
+            width: 200px;
+            height: 300px;
+            background-position: 50% 50%;
+            display: inline-block;
+            transition: 0.5s;
+            background-size: cover;
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            transform: translate(0, -50%);
+            border-radius: 20px;
+            box-shadow: 0 30px 50px #505050;
+        }
+
+        .item:nth-child(1),
+        .item:nth-child(2) {
+            left: 0;
+            top: 0;
+            transform: translate(0, 0);
+            border-radius: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: none;
+        }
+
+        .item:nth-child(3) {
+            left: 50%;
+        }
+
+        .item:nth-child(4) {
+            left: calc(50% + 220px);
+        }
+
+        .item:nth-child(5) {
+            left: calc(50% + 440px);
+        }
+
+        .item:nth-child(n+6) {
+            left: calc(50% + 660px);
+            opacity: 0;
+        }
+
+        .item .content {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            width: 300px;
+            text-align: left;
+            padding: 0;
+            color: #eee;
+            transform: translate(0, -50%);
+            display: none;
+            font-family: system-ui;
+        }
+
+        .item:nth-child(2) .content {
+            display: block;
+            z-index: 11111;
+        }
+
+        .item .name,
+        .item .des,
+        .item button {
+            opacity: 0;
+            animation: showcontent 1s ease-in-out 1 forwards;
+        }
+
+        .buttons {
+            position: absolute;
+            bottom: 30px;
+            z-index: 222222;
+            text-align: center;
+            width: 100%;
+        }
+
+        .buttons button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #555;
+            transition: 0.5s;
+        }
+
+        .buttons button:hover {
+            background-color: #bac383;
+        }
+
+        /* Tambahkan aturan media queries untuk responsivitas */
+        @media screen and (max-width: 768px) {
+            .item {
+                width: 100%;
+                height: 200px;
+            }
+
+            .item:nth-child(4) {
+                left: calc(50% + 10px);
+            }
+
+            .item .content {
+                left: 10px;
+                width: calc(100% - 20px);
+            }
+        }
+
+        @keyframes showcontent {
+            from {
+                opacity: 0;
+                transform: translate(0, 100px);
+                filter: blur(33px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0);
+                filter: blur(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="logo">World Of Photography</h1>
+        <ul class="nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Tour.html">Tour</a></li>
+            <li><a href="./Explore.html">Explore</a></li>
+            <li class="ctn"><a href="https://www.instagram.com/photoup94?igsh=OGQ5ZDc2ODk2ZA==">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="slide">
+            <div class="item" style="background-image: url(another\ side\ \(kayla\).JPG);">
+                <div class="content">
+                    <div class="name">Another Side</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Acil\ \(1\).JPG);">
+                <div class="content">
+                    <div class="name">Keramaian Jakarta Kota</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Cesha.jpg);">
+                <div class="content">
+                    <div class="name">Chilhood</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(fira\ \(1\).jpg);">
+                <div class="content">
+                    <div class="name">Selesaikan</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Galuh.JPG);">
+                <div class="content">
+                    <div class="name">Pertolongan</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Jahro\ \(1\).jpg);">
+                <div class="content">
+                    <div class="name">Bekerja Sama</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(perbedaan\ gadget\ \(zahra\)\ .JPG);">
+                <div class="content">
+                    <div class="name">Melintasi Generasi Gadget</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Rimba\ \(1\).jpg);">
+                <div class="content">
+                    <div class="name">POLUSI</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Silvi\ \(1\).jpg);">
+                <div class="content">
+                    <div class="name">Regenerasi Ponsel</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Tradisi\ di\ Negaraku\ \(Rizal\).JPG);">
+                <div class="content">
+                    <div class="name">Tradisi di Negaraku</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(Wina.JPG);">
+                <div class="content">
+                    <div class="name">Sexual Harrasment</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(yuki\ \(1\).JPG);">
+                <div class="content">
+                    <div class="name">Bad Relationship</div>
+                    <button><a href="./Explore.html">See more</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+  
